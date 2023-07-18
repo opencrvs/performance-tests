@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn start",
+    "start": "bash run-all.sh",
+    "restore-scenario": "bash scripts/restore-scenario.sh"
   },
   "dependencies": {
     "@faker-js/faker": "^6.0.0-alpha.5",

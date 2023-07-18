@@ -2,7 +2,7 @@ import http from 'k6/http';
 import { check, fail } from 'k6';
 import { createDeclaration } from './declaration.js'
 
-const AUTH_API_HOST = 'https://auth.farajaland.opencrvs.org'
+const AUTH_API_HOST = 'http://localhost:4040'
 
 function getToken(
   username,
