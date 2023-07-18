@@ -58,7 +58,7 @@ export function setup() {
 export default function ({ token }: Context) {
   const response = fetchDeclaration(
     token,
-    "2fd0c422-b91c-410f-9ef2-49559f69fdac"
+    "f52fb06e-142b-419f-81d7-8f6ed9250335"
   );
 
   check(response, {

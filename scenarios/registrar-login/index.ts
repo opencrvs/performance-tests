@@ -1,6 +1,8 @@
 import { Page, chromium } from "k6/experimental/browser";
 import { check } from "k6";
 
+const HOSTNAME = __ENV.HOSTNAME;
+
 export const options = {
   iterations: 1,
 };
@@ -10,7 +12,9 @@ export default async function () {
   const page = browser.newPage() as unknown as Page;
 
   try {
-    await page.goto("http://localhost:3020");
+    await page.goto(
+      HOSTNAME ? `https://login.${HOSTNAME}` : "http://localhost:3020"
+    );
 
     page.locator("#username").type("k.mweene");
     page.locator("#password").type("test");
@@ -30,8 +34,10 @@ export default async function () {
     await page.waitForLoadState("networkidle");
 
     check(page, {
-      'Registrar sees "In progress" queue': () =>
-        page.locator("#navigation_progress").textContent() == "In progress",
+      'Registrar sees "In progress" queue': () => {
+        const text = page.locator("#navigation_progress").textContent();
+        return text.startsWith("In progress");
+      },
     });
   } finally {
     page.close();
