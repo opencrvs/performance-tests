@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn start",
-    "start": "bash run-all.sh",
+    "build": "tsc",
+    "start": "yarn build && bash run-all.sh",
+    "run-scenario": "yarn build && sh -c 'yarn restore-scenario ${0} && K6_BROWSER_ENABLED=true k6 run build/scenarios/${0}/index.js --out csv=$(pwd)/results/${0}.csv'",
     "restore-scenario": "bash scripts/restore-scenario.sh"
   },
   "dependencies": {
@@ -13,5 +15,10 @@
     "date-fns": "^2.28.0"
   },
   "author": "Riku Rouvila <riku@opencrvs.org>",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@types/k6": "^0.45.0",
+    "playwright": "^1.36.1",
+    "typescript": "^5.1.6"
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": false,
+    "skipLibCheck": true,
+    "outDir": "build/",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "lib": [
+      "esnext.asynciterable",
+      "es6",
+      "es2017",
+      "dom"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "types": [
+
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "typings"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}

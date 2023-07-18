@@ -67,6 +67,8 @@ rm -rf $OPENCRVS_CORE_PATH/data/backups/*
 cat scenarios/$SCENARIO_NAME/dataset/*.tar.gz.part.* | tar -xzf - -C $OPENCRVS_CORE_PATH/data/backups
 cat $OPENCRVS_CORE_PATH/data/backups/*.tar.gz | tar -xzf - -C $OPENCRVS_CORE_PATH/data/backups
 
+rm -rf $OPENCRVS_CORE_PATH/data/backups/*.tar.gz
+
 # Automatically detect the label
 LABEL=$(ls $OPENCRVS_CORE_PATH/data/backups/influxdb | head -n 1)
 
