@@ -1,12 +1,42 @@
 ## Installation
 
-Install Git LFS. On MacOS the installation should be
+1. Install Git LFS. On MacOS the installation should be
 
 `brew install git-lfs`
 
 Once the command succeeds, run `git lfs install`.
 
 You can read more about installation [here](https://git-lfs.com/).
+
+2. Install k6
+
+```
+brew install k6
+```
+
+3. Install dependencies
+
+```
+yarn
+```
+
+4. Run tests locally
+
+```
+yarn start
+```
+
+## Scenarios
+
+Scenarios define OpenCRVS and its database in a specific state. Each scenario contains a dataset that is a backup taken from a locally running OpenCRVS instance that has been set up to have the number of records needed for the test.
+
+New scenarios can be created using the
+
+```
+bash infrastructure/emergency-backup-metadata.sh
+```
+
+script in OpenCRVS Farajaland repository. Note that the output .tar.gz needs to split to chunks of <2GB. In most cases the package shouldn't be more than 100Mb of size. Please ensure your minio & backup directories are empty before starting to create a scenario.
 
 ### Why are datasets split into chunks of 2GB
 
