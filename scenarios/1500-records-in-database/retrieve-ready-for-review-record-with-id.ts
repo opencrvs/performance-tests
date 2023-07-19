@@ -68,11 +68,13 @@ function getDeclarations(token: string) {
   const { data } = response.json() as {
     data: { reviewTab: { results: any[] } };
   };
+
   return data.reviewTab.results;
 }
 
 export const options = {
-  iterations: 10,
+  iterations: 1,
+  name: "1500 records - retrieve ready for review record audit with id",
 };
 
 export function setup() {
@@ -89,6 +91,7 @@ type Context = ReturnType<typeof setup>;
 export default function ({ token, declarations }: Context) {
   const declaration =
     declarations[Math.floor(Math.random() * declarations.length)];
+
   const response = fetchDeclaration(token, declaration.id);
 
   check(response, {

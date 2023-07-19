@@ -46,6 +46,7 @@ function fetchDeclaration(token: string, id: string) {
 
 export const options = {
   iterations: 100,
+  name: "Fresh install - Increasing record audit history size",
 };
 
 type Context = ReturnType<typeof setup>;

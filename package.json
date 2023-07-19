@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn start",
-    "build": "tsc",
+    "build": "rm -rf build && tsc",
     "start": "yarn build && bash run-all.sh",
     "run-scenario": "yarn build && sh -c 'yarn restore-scenario ${0} && bash run-scenario.sh ${0}'",
     "restore-scenario": "bash scripts/restore-scenario.sh"
