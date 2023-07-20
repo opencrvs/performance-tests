@@ -73,8 +73,7 @@ function getDeclarations(token: string) {
 }
 
 export const options = {
-  iterations: 1,
-  name: "1500 records - retrieve ready for review record audit with id",
+  iterations: 30,
 };
 
 export function setup() {

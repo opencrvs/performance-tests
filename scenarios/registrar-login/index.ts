@@ -5,7 +5,6 @@ const HOSTNAME = __ENV.HOSTNAME;
 
 export const options = {
   iterations: 1,
-  name: "registrar-login",
 };
 
 export default async function () {

@@ -2,7 +2,7 @@
 
 This package contains a test harness for testing the performance of various OpenCRVS features. The primary design principle is to keep the tests as simple, focused and small as possible. This allow us to easily interpret the results and compare between OpenCRVS versions. For the most reliable and reproducable results, it's better to focus on testing let say, the auth endpoint instead of testing the whole login flow. For example
 
-If we know it **takes a 10Kb payload** to login and the endpoint **returns a 20Kb payload** after **processing the request for 1.5 seconds**, we can derive the following table
+If we know it **takes a 10Kb payload** (`data_sent`) to login and the endpoint **returns a 20Kb payload** (`data_received`) after **processing the request for 1.5 seconds** (`http_req_waiting`), we can derive the following table
 
 | Network type | Network speed | Time uploading and downloading (seconds) | Total time (seconds) |
 | ------------ | ------------- | ---------------------------------------- | -------------------- |

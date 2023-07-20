@@ -81,7 +81,6 @@ function getDeclarations(token: string) {
 
 export const options = {
   iterations: 10,
-  name: "1500 records - search by tracking id",
 };
 
 export function setup() {

@@ -6,7 +6,7 @@ trap "exit" INT
 mkdir -p $WORKING_DIR/results
 
 SCENARIO=$1
-yarn restore-scenario $SCENARIO
+
 for TEST_PATH in build/scenarios/$SCENARIO/*.js; do
   TEST=$(basename $TEST_PATH)
   TEST_NAME="${TEST%%.*}"
