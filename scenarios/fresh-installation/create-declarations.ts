@@ -1,31 +1,6 @@
-import * as http from "k6/http";
 import { check, fail } from "k6";
 import { createDeclaration } from "./utils/declaration.js";
-
-const AUTH_API_HOST = "http://localhost:4040";
-
-function getToken(username: string, password: string) {
-  const authenticateResponse = http.post(`${AUTH_API_HOST}/authenticate`, {
-    username,
-    password,
-  });
-
-  const { nonce } = authenticateResponse.json() as { nonce: string };
-
-  const verifyResponse = http.post(`${AUTH_API_HOST}/verifyCode`, {
-    nonce,
-    code: "000000",
-  });
-  const data = verifyResponse.json() as { token: string };
-
-  if (!data.token) {
-    throw new Error(
-      `Failed to get token for user ${username}, password ${password}`
-    );
-  }
-
-  return data.token;
-}
+import { getToken } from "../../utils/auth.js";
 
 export const options = {
   iterations: 30,
@@ -42,6 +17,7 @@ export default function ({ token }: Context) {
 
   const validResponse = check(response, {
     "is status 200": (r) => r.status === 200,
+    "processing < 5s": (r) => r.timings.waiting < 5000,
     "is composition id present": (r) => {
       const json: any = r.json();
       try {

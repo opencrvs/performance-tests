@@ -33,6 +33,12 @@ Another finding is, the size delta between iterations is roughly `2054866 - 1713
 
 This test measures the time it takes for a declaration to be created in an empty database when there are 4 attachments embedded in the record.
 
+**Limits**
+
+```
+http_req_waiting < 5000ms
+```
+
 `data_sent` consistently hovers around 2167099 bytes, so ~2MB which is as per our expectations.
 
 | metric           | value (ms)   |

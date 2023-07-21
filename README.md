@@ -64,6 +64,8 @@ yarn
 yarn start
 ```
 
+All test results are saved in `results` directory on the project root.
+
 ### Why are datasets split into chunks of 2GB
 
 Github Large File storage has an upper limit of 2GB for organisations using Github Free. You can read about it [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).

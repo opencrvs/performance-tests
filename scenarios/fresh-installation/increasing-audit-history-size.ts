@@ -1,33 +1,10 @@
 import * as http from "k6/http";
 import { check } from "k6";
 import { Gauge, Counter } from "k6/metrics";
+import { getToken } from "../../utils/auth.js";
 
 export const GaugeContentSize = new Gauge("ContentSize");
 export const CounterErrors = new Counter("Errors");
-const AUTH_API_HOST = "http://localhost:4040";
-
-function getToken(username: string, password: string) {
-  const authenticateResponse = http.post(`${AUTH_API_HOST}/authenticate`, {
-    username,
-    password,
-  });
-
-  const { nonce } = authenticateResponse.json() as { nonce: string };
-
-  const verifyResponse = http.post(`${AUTH_API_HOST}/verifyCode`, {
-    nonce,
-    code: "000000",
-  });
-  const data = verifyResponse.json() as { token: string };
-
-  if (!data.token) {
-    throw new Error(
-      `Failed to get token for user ${username}, password ${password}`
-    );
-  }
-
-  return data.token;
-}
 
 function fetchDeclaration(token: string, id: string) {
   return http.post(
