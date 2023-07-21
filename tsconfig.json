@@ -20,10 +20,7 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "types": [
-
-    ]
+    "noUnusedLocals": true
   },
   "include": [
     "**/*.ts",

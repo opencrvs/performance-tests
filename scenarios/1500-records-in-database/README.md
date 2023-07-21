@@ -40,7 +40,7 @@ In this example we see that measurements are well below our limits.
 | data_received | 1670             |
 | data_received | 1664             |
 
-Data received also stays consistent and is below 2Kb. So receiving it wouldn't cause any issue with any connection type.
+Data received also stays consistent and is below 2KB. So receiving it wouldn't cause any issue with any connection type.
 
 ## Retrieve ready for review record with an id
 
@@ -64,7 +64,7 @@ http_req_waiting < 5000ms
 | http_req_waiting | 6541.544000       |
 | http_req_waiting | 5997.119000       |
 
-In this result set we see that it takes significantly long for the backend to process the search request even when the record is queried directly with an id. `data_received` consistently shows around 1668 bits of downloaded content, which should be fast to download on any connection speed.
+In this result set we see that it takes significantly long for the backend to process the search request even when the record is queried directly with an id. `data_received` consistently shows around 1668 bytes of downloaded content, which should be fast to download on any connection speed.
 
 With the current 5s limit, we see most of the requests failing the check
 
