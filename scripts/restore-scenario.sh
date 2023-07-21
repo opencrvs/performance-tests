@@ -1,6 +1,7 @@
 set -e
 
-SCENARIO_NAME=$1
+# Sometimes scenarios can be passed in scenario-name/test format but we only need scenario here
+SCENARIO_NAME=$(echo "$1" | cut -d / -f 1)
 OPENCRVS_CORE_PATH=$2
 COUNTRY_CONFIG_PATH=$3
 

@@ -50,13 +50,15 @@ You can read more about installation [here](https://git-lfs.com/).
 brew install k6
 ```
 
-3. Install dependencies
+3. Clone the repository. After this run `git lfs pull`
+
+4. Install dependencies
 
 ```
 yarn
 ```
 
-4. Run tests locally
+5. Run tests locally
 
 ```
 yarn start
