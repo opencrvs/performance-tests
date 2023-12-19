@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@types/k6/-/k6-0.45.0.tgz#0d678cdbbb2d54fd057296835a11b36b3be6ab96"
   integrity sha512-ySQ1LQ67kqYz/4W6oJ/9afPWHV/2GYKVUQFkOzM+fBtY2POCY8D7GX4F6rT0R8u2Be/DK8s1Ypr2s+LbToj/oA==
 
-date-fns@^2.28.0:
-  version "2.28.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.28.0.tgz#9570d656f5fc13143e50c975a3b6bbeb46cd08b2"
-  integrity sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==
+date-fns@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-3.0.0.tgz#dc46aa8c403966a588fbc3794c6b006c17ab8691"
+  integrity sha512-xjDz3rNN9jp+Lh3P/4MeY4E5HkaRnEnrJCcrdRZnKdn42gJlIe6hwrrwVXePRwVR2kh1UcMnz00erYBnHF8PFA==
 
 playwright-core@1.36.1:
   version "1.36.1"
