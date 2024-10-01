@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-6.3.1.tgz#1ae963dd40405450a2945408cba553e1afa3e0fb"
   integrity sha512-8YXBE2ZcU/pImVOHX7MWrSR/X5up7t6rPWZlk34RwZEcdr3ua6X+32pSd6XuOQRN+vbuvYNfA6iey8NbrjuMFQ==
 
-"@types/k6@^0.45.0":
-  version "0.45.0"
-  resolved "https://registry.yarnpkg.com/@types/k6/-/k6-0.45.0.tgz#0d678cdbbb2d54fd057296835a11b36b3be6ab96"
-  integrity sha512-ySQ1LQ67kqYz/4W6oJ/9afPWHV/2GYKVUQFkOzM+fBtY2POCY8D7GX4F6rT0R8u2Be/DK8s1Ypr2s+LbToj/oA==
+"@types/k6@^0.54.0":
+  version "0.54.0"
+  resolved "https://registry.yarnpkg.com/@types/k6/-/k6-0.54.0.tgz#da3d185b580f48847faf86a448481fc019c966cc"
+  integrity sha512-ZgsqDQs0dtu9RVxN/315MQOZ3BSrdL85HleMZckcLPrmaE5gtGse02/2EuAIQEtYqNDmqcTrOnoxvptUHIoBYw==
 
 date-fns@^2.28.0:
   version "2.28.0"
